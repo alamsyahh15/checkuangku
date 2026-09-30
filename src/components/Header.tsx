@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         <div className="header-actions">
-          <div className="presets-dropdown">
+          {/* <div className="presets-dropdown">
             <button type="button" className="btn-preset btn-preset-screenshot" onClick={onLoadScreenshotPreset} title="Muat data contoh seperti screenshot">
               <FileText className="preset-icon" />
               Bahaya
@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
               <Sparkles className="preset-icon" />
               Sehat
             </button>
-          </div>
+          </div> */}
 
           {currentStep > 1 && (
             <button type="button" className="btn-header-reset" onClick={onReset} title="Mulai Dari Awal">
