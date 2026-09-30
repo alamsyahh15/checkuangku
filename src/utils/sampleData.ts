@@ -152,3 +152,55 @@ export const healthyFormData: FinancialFormData = {
     lainLain: 0,
   },
 };
+
+/**
+ * Warning Sample Preset (Waspada)
+ * Single failed indicator: Dana Darurat di bawah 3X (0.92X), Tabungan aman (12.8%), Cicilan aman (22.8%)
+ */
+export const warningFormData: FinancialFormData = {
+  aset: {
+    uangTunai: 5000000,
+    tabungan: 10000000,
+    deposito: 0,
+    nilaiTunaiAsuransi: 0,
+    saham: 15000000,
+    reksadana: 10000000,
+    obligasi: 0,
+    emas: 10000000,
+    rumahTinggal: 300000000,
+    perabotanRumahTangga: 20000000,
+    kendaraan: 80000000,
+    lainLain: 0,
+  },
+  utang: {
+    kartuKredit: 5000000,
+    kreditTanpaAgunan: 10000000,
+    kreditKoperasi: 0,
+    kreditRumah: 120000000,
+    kreditKendaraan: 25000000,
+    lainLain: 0,
+  },
+  pendapatan: {
+    gaji: 12000000,
+    hasilUsaha: 2000000,
+    bunga: 0,
+    hasilSewa: 0,
+    lainLain: 0,
+  },
+  pengeluaran: {
+    cicilanUtang: 3200000, // 22.8% dari 14jt (Aman)
+    premiAsuransi: 800000,
+    tabunganInvestasiRutin: 1800000, // 12.8% dari 14jt (Aman)
+    belanjaRumahTangga: 4000000,
+    utilitas: 1000000,
+    transportasi: 1200000,
+    pengeluaranAnak: 1500000,
+    asistenRumahTangga: 0,
+    zakatSosialHadiah: 500000,
+    kesehatan: 500000,
+    hiburanKeluarga: 800000,
+    pengeluaranPribadi: 1000000,
+    lainLain: 0,
+  },
+};
+

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { FinancialFormData, FormStep } from './types/financial';
-import { emptyFormData, screenshotFormData, healthyFormData } from './utils/sampleData';
+import { emptyFormData, screenshotFormData, healthyFormData, warningFormData } from './utils/sampleData';
 import { calculateFinancialHealth } from './utils/calculator';
 import { Header } from './components/Header';
 import { StepHeader } from './components/StepHeader';
@@ -48,6 +48,12 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleLoadWarningPreset = () => {
+    setFormData(warningFormData);
+    setCurrentStep(5);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const calculationResult = calculateFinancialHealth(formData);
 
   return (
@@ -55,6 +61,7 @@ export function App() {
       <Header
         onLoadScreenshotPreset={handleLoadScreenshotPreset}
         onLoadHealthyPreset={handleLoadHealthyPreset}
+        onLoadWarningPreset={handleLoadWarningPreset}
         onReset={handleReset}
         currentStep={currentStep}
       />

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Wallet, Sparkles, RefreshCw, FileText } from 'lucide-react';
+import { Wallet, Sparkles, RefreshCw, FileText, AlertTriangle } from 'lucide-react';
 
 interface HeaderProps {
   onLoadScreenshotPreset: () => void;
   onLoadHealthyPreset: () => void;
+  onLoadWarningPreset: () => void;
   onReset: () => void;
   currentStep: number;
 }
@@ -11,6 +12,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   onLoadScreenshotPreset,
   onLoadHealthyPreset,
+  onLoadWarningPreset,
   onReset,
   currentStep,
 }) => {
@@ -31,11 +33,15 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="presets-dropdown">
             <button type="button" className="btn-preset btn-preset-screenshot" onClick={onLoadScreenshotPreset} title="Muat data contoh seperti screenshot">
               <FileText className="preset-icon" />
-              Contoh Data Screenshot
+              Bahaya
+            </button>
+            <button type="button" className="btn-preset btn-preset-warning" onClick={onLoadWarningPreset} title="Muat data simulasi status waspada">
+              <AlertTriangle className="preset-icon" />
+              Waspada
             </button>
             <button type="button" className="btn-preset btn-preset-healthy" onClick={onLoadHealthyPreset} title="Muat data simulasi keuangan sehat">
               <Sparkles className="preset-icon" />
-              Contoh Data Sehat
+              Sehat
             </button>
           </div>
 

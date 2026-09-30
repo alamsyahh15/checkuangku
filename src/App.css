@@ -107,6 +107,16 @@
   background: #dbeafe;
 }
 
+.btn-preset-warning {
+  border-color: #fde047;
+  color: #a16207;
+  background: #fefce8;
+}
+
+.btn-preset-warning:hover {
+  background: #fef9c3;
+}
+
 .btn-preset-healthy {
   border-color: #86efac;
   color: #15803d;
