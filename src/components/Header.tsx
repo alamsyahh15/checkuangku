@@ -1,18 +1,15 @@
 import React from 'react';
-import { Wallet, Sparkles, RefreshCw, FileText, AlertTriangle } from 'lucide-react';
+import { Wallet, RefreshCw } from 'lucide-react';
 
 interface HeaderProps {
-  onLoadScreenshotPreset: () => void;
-  onLoadHealthyPreset: () => void;
-  onLoadWarningPreset: () => void;
+  onLoadScreenshotPreset?: () => void;
+  onLoadHealthyPreset?: () => void;
+  onLoadWarningPreset?: () => void;
   onReset: () => void;
   currentStep: number;
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  onLoadScreenshotPreset,
-  onLoadHealthyPreset,
-  onLoadWarningPreset,
   onReset,
   currentStep,
 }) => {
